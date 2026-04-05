@@ -1,18 +1,19 @@
 <resources>
     <string name="app_name">Maru Rent</string>
     <string name="gambar">Gambar %1$s</string>
-    <string name="desc">Butuh tempat seru buat main atau nonton? \n
+    <string name="des">Butuh tempat seru buat main atau nonton? \n
     Pilih ruangan favoritmu dan mulai pengalaman seru di Maru Rent!</string>
     <string name="kembali">Kembali</string>
     <string name="katalogKami">Katalog Maru</string>
     <string name="rental">Mulai Rental</string>
     <string name="copyright">© 2026 Maru Rent. Seluruh hak cipta dilindungi.</string>
-    <string name="ruangMeeting">Ruang Meeting</string>
+    <string name="ruangRapat">Ruang Rapat</string>
     <string name="ruangPermainan">Ruang Permainan</string>
     <string name="ruangMusik">Ruang Musik</string>
     <string name="ruangNonton">Ruang Nonton</string>
-    <string name="desc_meeting">Ruangan yang nyaman untuk kamu yang ingin rapat dan diskusi bersama tim.</string>
-    <string name="desc_ps">Ruang yang penuh permainan, cocok untuk kamu yang merasa penat</string>
+    <string name="desc_rapat">Ruangan yang nyaman untuk kamu yang ingin rapat dan diskusi bersama tim.</string>
+    <string name="desc_permainan">Ruang yang penuh permainan, cocok untuk kamu yang merasa penat</string>
     <string name="desc_nonton">Ruang nonton ala ala bioskop mini</string>
     <string name="desc_musik">Ruangan buat kamu yang ingin latihan musik atau mungkin iseng iseng rekaman!</string>
+    <string name="lanjut">Lanjut</string>
 </resources>

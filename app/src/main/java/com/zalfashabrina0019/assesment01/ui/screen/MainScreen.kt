@@ -9,6 +9,7 @@ import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
@@ -22,6 +23,7 @@ import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
@@ -88,12 +90,12 @@ fun MainScreen(navController: NavController) {
             )
         }
     ) { innerPadding ->
-        ScreenContent(Modifier.padding(innerPadding))
+        ScreenContent(navController = navController, Modifier.padding(innerPadding))
     }
 }
 
 @Composable
-fun ScreenContent(modifier: Modifier = Modifier) {
+fun ScreenContent(navController: NavController, modifier: Modifier = Modifier) {
     val image = painterResource(R.drawable.marurent)
 
     val localFont = FontFamily(
@@ -123,7 +125,7 @@ fun ScreenContent(modifier: Modifier = Modifier) {
             modifier = Modifier.padding(top = 3.dp)
         )
         Text(
-            text = stringResource(R.string.desc),
+            text = stringResource(R.string.des),
             fontFamily = localFont,
             fontWeight = FontWeight.Medium,
             textAlign = TextAlign.Center,
@@ -131,12 +133,24 @@ fun ScreenContent(modifier: Modifier = Modifier) {
             color = MaterialTheme.colorScheme.primary,
             modifier = Modifier.padding(top = 2.dp)
         )
-        Button(
-            onClick = {},
-            modifier = Modifier.fillMaxWidth(0.5f).padding(top = 24.dp),
-            contentPadding = PaddingValues(16.dp)
+        Row(
+            modifier = Modifier.fillMaxWidth().padding(top = 24.dp),
+            horizontalArrangement = Arrangement.Center
         ) {
-            Text(text = stringResource(R.string.rental))
+            Button(
+                onClick = {},
+                modifier = Modifier.padding(end = 8.dp),
+                contentPadding = PaddingValues(16.dp)
+            ) {
+                Text(text = stringResource(R.string.rental))
+            }
+            OutlinedButton(
+                onClick = { navController.navigate(Screen.Katalog.route) },
+                modifier = Modifier.padding(start = 8.dp),
+                contentPadding = PaddingValues(16.dp)
+            ) {
+                Text(text = stringResource(R.string.katalogKami))
+            }
         }
     }
 }
