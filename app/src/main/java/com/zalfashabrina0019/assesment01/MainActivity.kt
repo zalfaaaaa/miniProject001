@@ -31,6 +31,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.zalfashabrina0019.assesment01.navigation.SetupNavGraph
 import com.zalfashabrina0019.assesment01.ui.theme.Assesment01Theme
 
 class MainActivity : ComponentActivity() {
@@ -39,7 +40,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             Assesment01Theme {
-                MainScreen()
+                SetupNavGraph()
             }
         }
     }
