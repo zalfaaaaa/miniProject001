@@ -7,4 +7,12 @@
     <string name="katalogKami">Katalog Maru</string>
     <string name="rental">Mulai Rental</string>
     <string name="copyright">© 2026 Maru Rent. Seluruh hak cipta dilindungi.</string>
+    <string name="ruangMeeting">Ruang Meeting</string>
+    <string name="ruangPermainan">Ruang Permainan</string>
+    <string name="ruangMusik">Ruang Musik</string>
+    <string name="ruangNonton">Ruang Nonton</string>
+    <string name="desc_meeting">Ruangan yang nyaman untuk kamu yang ingin rapat dan diskusi bersama tim.</string>
+    <string name="desc_ps">Ruang yang penuh permainan, cocok untuk kamu yang merasa penat</string>
+    <string name="desc_nonton">Ruang nonton ala ala bioskop mini</string>
+    <string name="desc_musik">Ruangan buat kamu yang ingin latihan musik atau mungkin iseng iseng rekaman!</string>
 </resources>
