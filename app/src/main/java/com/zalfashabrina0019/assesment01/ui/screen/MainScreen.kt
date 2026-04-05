@@ -42,6 +42,7 @@ import androidx.navigation.NavController
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
 import com.zalfashabrina0019.assesment01.R
+import com.zalfashabrina0019.assesment01.model.Ruangan
 import com.zalfashabrina0019.assesment01.navigation.Screen
 import com.zalfashabrina0019.assesment01.navigation.SetupNavGraph
 import com.zalfashabrina0019.assesment01.ui.theme.Assesment01Theme
@@ -94,9 +95,19 @@ fun MainScreen(navController: NavController) {
 @Composable
 fun ScreenContent(modifier: Modifier = Modifier) {
     val image = painterResource(R.drawable.marurent)
+
     val localFont = FontFamily(
         Font(R.font.poppins_bold, FontWeight.Bold),
         Font(R.font.poppins_medium, FontWeight.Medium)
+    )
+
+    val data = listOf(
+        Ruangan("meetingroom", R.drawable.meetingroom),
+        Ruangan("coworkingspace", R.drawable.coworkingspace),
+        Ruangan("psroom", R.drawable.psroom),
+        Ruangan("musicstudio", R.drawable.musicstudio),
+        Ruangan("movieroom", R.drawable.movieroom)
+
     )
 
     Column(

@@ -54,3 +54,4 @@ fun KatalogScreen(navController: NavHostController) {
         )
     }
 }
+
