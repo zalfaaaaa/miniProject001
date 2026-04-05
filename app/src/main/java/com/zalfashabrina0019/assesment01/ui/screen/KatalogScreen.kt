@@ -21,6 +21,7 @@ import androidx.navigation.NavController
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
 import com.zalfashabrina0019.assesment01.R
+import com.zalfashabrina0019.assesment01.model.Ruangan
 import com.zalfashabrina0019.assesment01.ui.theme.Assesment01Theme
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -55,3 +56,14 @@ fun KatalogScreen(navController: NavHostController) {
     }
 }
 
+@Composable
+fun ScreenKatalogContent(modifier: Modifier = Modifier) {
+    val data = listOf(
+        Ruangan("meetingroom", R.drawable.meetingroom),
+        Ruangan("coworkingspace", R.drawable.coworkingspace),
+        Ruangan("psroom", R.drawable.psroom),
+        Ruangan("musicstudio", R.drawable.musicstudio),
+        Ruangan("movieroom", R.drawable.movieroom)
+
+    )
+}

@@ -101,15 +101,6 @@ fun ScreenContent(modifier: Modifier = Modifier) {
         Font(R.font.poppins_medium, FontWeight.Medium)
     )
 
-    val data = listOf(
-        Ruangan("meetingroom", R.drawable.meetingroom),
-        Ruangan("coworkingspace", R.drawable.coworkingspace),
-        Ruangan("psroom", R.drawable.psroom),
-        Ruangan("musicstudio", R.drawable.musicstudio),
-        Ruangan("movieroom", R.drawable.movieroom)
-
-    )
-
     Column(
         modifier = modifier.fillMaxSize()
             .verticalScroll(rememberScrollState())
