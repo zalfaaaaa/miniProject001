@@ -1,4 +1,6 @@
 <resources>
     <string name="app_name">Maru Rent</string>
     <string name="gambar">Gambar %1$s</string>
+    <string name="desc">Butuh tempat seru buat main atau nonton? \n
+Pilih room favoritmu dan mulai pengalaman seru di Maru Rent!</string>
 </resources>
