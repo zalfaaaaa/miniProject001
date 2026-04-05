@@ -64,6 +64,9 @@ fun MainScreen() {
 @Composable
 fun ScreenContent(modifier: Modifier = Modifier) {
     val image = painterResource(R.drawable.marurent)
+    val localFont = FontFamily(
+        Font(R.font.poppins_bold)
+    )
 
     Column(
         modifier = modifier.fillMaxSize().padding(16.dp),
@@ -75,6 +78,13 @@ fun ScreenContent(modifier: Modifier = Modifier) {
             contentDescription = stringResource(R.string.gambar),
             contentScale = ContentScale.Crop,
             modifier = Modifier.size(132.dp)
+        )
+        Text(
+            text = stringResource(R.string.app_name),
+            fontFamily = localFont,
+            style = MaterialTheme.typography.headlineLarge,
+            color =  MaterialTheme.colorScheme.primary,
+            modifier = Modifier.padding(top = 3.dp)
         )
     }
 }
