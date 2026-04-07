@@ -138,7 +138,7 @@ fun ScreenContent(navController: NavController, modifier: Modifier = Modifier) {
             horizontalArrangement = Arrangement.Center
         ) {
             Button(
-                onClick = {},
+                onClick = { navController.navigate(Screen.Form.route)},
                 modifier = Modifier.padding(end = 8.dp),
                 contentPadding = PaddingValues(16.dp)
             ) {

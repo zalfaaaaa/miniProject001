@@ -16,4 +16,14 @@
     <string name="desc_nonton">Ruang nonton ala ala bioskop mini</string>
     <string name="desc_musik">Ruangan buat kamu yang ingin latihan musik atau mungkin iseng iseng rekaman!</string>
     <string name="lanjut">Lanjut</string>
+    <string name="mulaiRent">Mulai Rental</string>
+    <string name="durasi">Durasi</string>
+    <string name="harga">Harga</string>
+    <string name="pilihHarga">Pilih Harga</string>
+    <string name="nama">Nama</string>
+    <string name="simpan">Simpan</string>
+    <string name="harga_R.rapat">10000</string>
+    <string name="harga_R.permainan">15000</string>
+    <string name="harga_R.nonton">20000</string>
+    <string name="harga_R.musik">25000</string>
 </resources>
