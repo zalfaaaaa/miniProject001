@@ -7,6 +7,7 @@
     <string name="katalogKami">Maru\'s Catalog</string>
     <string name="rental">Start Rent</string>
     <string name="copyright">Maru Rent is an Android application designed to help users easily and efficiently rent rooms according to their needs.\\n\\n     This application was developed as part of a mobile programming assignment.\\n\\n     Copyright © 2026 Maru Rent.\\nAll rights reserved.</string>
+    <string name="ruangan">Room</string>
     <string name="ruangRapat">Meeting Room</string>
     <string name="ruangPermainan">Gaming Room</string>
     <string name="ruangMusik">Music Room</string>
@@ -16,6 +17,7 @@
     <string name="durasi">Duration</string>
     <string name="harga">Price</string>
     <string name="pilihHarga">Choose Price</string>
+    <string name="pilihRuang">Choose Room</string>
     <string name="nama">Name</string>
     <string name="simpan">Save</string>
     <string name="desc_rapat">This room is designed to provide comfort for those who want to hold meetings and discussions with their team.</string>
@@ -28,5 +30,7 @@
     <string name="harga_R.permainan">Start from IDR 15,000</string>
     <string name="harga_R.nonton">Start from IDR 20,000</string>
     <string name="tentangKami">About Us</string>
-    <string name="bagikan_template">=== MARU RENT ===\\n\\n  Name: %1$s\\n Room: %2$s\\n Duration: %3$s hours\\n Price: IDR %4$d\\n\\n Total Price: IDR %5$d</string>
+    <string name="bagikan_template">"        === MARU RENT ===          Name: %1$s         Room: %2$s         Duration: %3$s Hours         Price: Rp %4$d         Total Price: Rp %5$d"</string>
+    <string name="jam">Hours</string>
+    <string name="Rp">IDR</string>
 </resources>

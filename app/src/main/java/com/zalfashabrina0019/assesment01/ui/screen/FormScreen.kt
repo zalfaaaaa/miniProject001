@@ -178,8 +178,8 @@ fun ScreenFormContent(modifier: Modifier = Modifier) {
                 value = ruanganTerpilih,
                 onValueChange = {},
                 readOnly = true,
-                label = { Text("Ruangan") },
-                placeholder = { Text("Pilih ruangan") },
+                label = { Text(stringResource(R.string.ruangan)) },
+                placeholder = { Text(stringResource(R.string.pilihRuang)) },
                 trailingIcon = { ExposedDropdownMenuDefaults.TrailingIcon(expanded = isExpanded) },
                 supportingText = { ErrorHint(ruanganError) },
                 isError = ruanganError,
@@ -203,7 +203,7 @@ fun ScreenFormContent(modifier: Modifier = Modifier) {
             value = durasi,
             onValueChange = { durasi = it },
             label = { Text(text = stringResource(R.string.durasi)) },
-            trailingIcon = { IconPicker(durasiError, "jam") },
+            trailingIcon = { IconPicker(durasiError, stringResource(R.string.jam)) },
             supportingText = { ErrorHint(durasiError) },
             isError = durasiError,
             singleLine = true,
@@ -272,10 +272,10 @@ fun ScreenFormContent(modifier: Modifier = Modifier) {
                 nama, ruanganTerpilih, durasi, hargaTerpilih, totalHarga
             )
 
-            Text(text = "Nama: $nama")
-            Text(text = "Ruangan: $ruanganTerpilih")
-            Text(text = "Durasi: $durasi jam")
-            Text(text = "Harga: Rp $hargaTerpilih")
+            Text(text = stringResource(R.string.nama) + ": $nama")
+            Text(text = stringResource(R.string.ruangan) + ": $ruanganTerpilih")
+            Text(text = stringResource(R.string.durasi) + ": $durasi hours")
+            Text(text = stringResource(R.string.harga) + ":" + stringResource(R.string.Rp) +"$hargaTerpilih")
 
             Text(
                 text = "Total Harga: Rp $totalHarga",
