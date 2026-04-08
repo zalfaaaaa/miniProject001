@@ -267,14 +267,10 @@ fun ScreenFormContent(modifier: Modifier = Modifier) {
         if (tampilHasil) {
             HorizontalDivider(modifier = Modifier.padding(vertical = 2.dp))
 
-            val message = """
-            === MARU RENT ===
-            Nama: $nama
-            Ruangan: $ruanganTerpilih
-            Durasi: $durasi jam
-            Harga: Rp $hargaTerpilih\n
-            Total Harga: Rp $totalHarga
-            """.trimIndent()
+            val message = stringResource(
+                R.string.bagikan_template,
+                nama, ruanganTerpilih, durasi, hargaTerpilih, totalHarga
+            )
 
             Text(text = "Nama: $nama")
             Text(text = "Ruangan: $ruanganTerpilih")

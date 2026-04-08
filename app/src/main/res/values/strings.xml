@@ -6,7 +6,11 @@
     <string name="kembali">Kembali</string>
     <string name="katalogKami">Katalog Maru</string>
     <string name="rental">Mulai Rental</string>
-    <string name="copyright">© 2026 Maru Rent. Seluruh hak cipta dilindungi.</string>
+    <string name="copyright">
+        Maru Rent merupakan sebuah aplikasi Android untuk membantu pengguna dalam menyewa ruangan dengan mudah dan praktis sesuai kebutuhan.\n\n
+        Aplikasi ini dibuat untuk keperluan tugas pemrograman mobile.\n\n
+        Copyright © 2026 Maru Rent.\nAll rights reserved.
+    </string>
     <string name="ruangRapat">Ruang Rapat</string>
     <string name="ruangPermainan">Ruang Permainan</string>
     <string name="ruangMusik">Ruang Musik</string>
@@ -31,4 +35,14 @@
     <string name="harga_R.musik">Mulai dari Rp. 25,000</string>
     <string name="input_invalid">Tidak boleh kosong!</string>
     <string name="perintah">Isi form di bawah ini!</string>
+    <string name="tentangKami">Tentang Kami</string>
+    <string name="bagikan_template">
+        === MARU RENT ===\n\n
+
+        Nama: %1$s\n
+        Ruangan: %2$s\n
+        Durasi: %3$s jam\n
+        Harga: Rp %4$d\n\n
+        Total Harga: Rp %5$d
+    </string>
 </resources>

@@ -70,12 +70,12 @@ fun MainScreen(navController: NavController) {
                 actions = {
                     IconButton(
                         onClick = {
-                            navController.navigate(Screen.Katalog.route)
+                            navController.navigate(Screen.About.route)
                         }
                     ) {
                         Icon(
                             imageVector = Icons.Outlined.Info,
-                            contentDescription = stringResource(R.string.katalogKami),
+                            contentDescription = stringResource(R.string.tentangKami),
                             tint = MaterialTheme.colorScheme.primary
                         )
                     }
