@@ -1,5 +1,7 @@
 package com.zalfashabrina0019.assesment01.ui.screen
 
+import android.content.Context
+import android.content.Intent
 import android.content.res.Configuration
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
@@ -39,6 +41,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.Font
@@ -107,6 +110,7 @@ fun ScreenFormContent(modifier: Modifier = Modifier) {
 
     var ruanganTerpilih by rememberSaveable { mutableStateOf("") }
     var isExpanded by remember { mutableStateOf(false) }
+    var ruanganError by rememberSaveable { mutableStateOf(false) }
 
     val daftarHarga = listOf( 10000, 15000, 20000, 25000 )
 
@@ -117,6 +121,8 @@ fun ScreenFormContent(modifier: Modifier = Modifier) {
     var totalHarga by rememberSaveable { mutableStateOf(0) }
 
     var tampilHasil by rememberSaveable { mutableStateOf(false) }
+
+    val context = LocalContext.current
     Column(
         modifier = modifier.fillMaxSize()
             .verticalScroll(rememberScrollState())
@@ -175,6 +181,8 @@ fun ScreenFormContent(modifier: Modifier = Modifier) {
                 label = { Text("Ruangan") },
                 placeholder = { Text("Pilih ruangan") },
                 trailingIcon = { ExposedDropdownMenuDefaults.TrailingIcon(expanded = isExpanded) },
+                supportingText = { ErrorHint(ruanganError) },
+                isError = ruanganError,
             )
             ExposedDropdownMenu(
                 expanded = isExpanded,
@@ -219,6 +227,8 @@ fun ScreenFormContent(modifier: Modifier = Modifier) {
                 label = { Text(stringResource(R.string.harga)) },
                 placeholder = { Text(stringResource(R.string.pilihHarga)) },
                 trailingIcon = { ExposedDropdownMenuDefaults.TrailingIcon(expanded = hargaExpanded) },
+                supportingText = { ErrorHint(hargaError) },
+                isError = hargaError,
             )
             ExposedDropdownMenu(
                 expanded = hargaExpanded,
@@ -238,9 +248,10 @@ fun ScreenFormContent(modifier: Modifier = Modifier) {
         Button(
             onClick = {
                 namaError  = nama.isBlank()
+                ruanganError = ruanganTerpilih.isBlank()
                 durasiError = (durasi == "" || durasi == "0")
                 hargaError = hargaTerpilih == 0
-                if (namaError || durasiError || hargaError) {
+                if (namaError || ruanganError || durasiError || hargaError) {
                     tampilHasil = false
                     return@Button
                 }
@@ -256,6 +267,15 @@ fun ScreenFormContent(modifier: Modifier = Modifier) {
         if (tampilHasil) {
             HorizontalDivider(modifier = Modifier.padding(vertical = 2.dp))
 
+            val message = """
+            === MARU RENT ===
+            Nama: $nama
+            Ruangan: $ruanganTerpilih
+            Durasi: $durasi jam
+            Harga: Rp $hargaTerpilih\n
+            Total Harga: Rp $totalHarga
+            """.trimIndent()
+
             Text(text = "Nama: $nama")
             Text(text = "Ruangan: $ruanganTerpilih")
             Text(text = "Durasi: $durasi jam")
@@ -265,6 +285,15 @@ fun ScreenFormContent(modifier: Modifier = Modifier) {
                 text = "Total Harga: Rp $totalHarga",
                 style = MaterialTheme.typography.titleLarge
             )
+
+            Button(
+                onClick = {
+                    shareData(context, message)
+                },
+                modifier = Modifier.padding(top = 8.dp)
+            ) {
+                Text("Bagikan")
+            }
         }
     }
 }
@@ -294,6 +323,15 @@ private fun hitungTotal(durasi: Int, harga: Int): Int {
     return durasi * harga
 }
 
+private fun shareData(context: Context, message: String) {
+    val shareIntent = Intent(Intent.ACTION_SEND).apply {
+        type = "text/plain"
+        putExtra(Intent.EXTRA_TEXT, message)
+    }
+    if (shareIntent.resolveActivity(context.packageManager) != null) {
+        context.startActivity(shareIntent)
+    }
+}
 
 @Preview(showBackground = true)
 @Preview(uiMode = Configuration.UI_MODE_NIGHT_YES, showBackground = true)
