@@ -33,4 +33,5 @@
     <string name="bagikan_template">"        === MARU RENT ===          Name: %1$s         Room: %2$s         Duration: %3$s Hours         Price: Rp %4$d         Total Price: Rp %5$d"</string>
     <string name="jam">Hours</string>
     <string name="Rp">IDR</string>
+    <string name="total">Total Price</string>
 </resources>

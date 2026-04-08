@@ -278,7 +278,7 @@ fun ScreenFormContent(modifier: Modifier = Modifier) {
             Text(text = stringResource(R.string.harga) + ":" + stringResource(R.string.Rp) +"$hargaTerpilih")
 
             Text(
-                text = "Total Harga: Rp $totalHarga",
+                text = stringResource(R.string.total) + ":" + stringResource(R.string.Rp) + "$totalHarga",
                 style = MaterialTheme.typography.titleLarge
             )
 
