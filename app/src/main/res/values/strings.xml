@@ -26,4 +26,6 @@
     <string name="harga_R.permainan">15000</string>
     <string name="harga_R.nonton">20000</string>
     <string name="harga_R.musik">25000</string>
+    <string name="input_invalid">Tidak boleh kosong.</string>
+    <string name="perintah">Isi form di bawah ini!</string>
 </resources>

@@ -48,10 +48,10 @@ import com.zalfashabrina0019.assesment01.ui.theme.Assesment01Theme
 @Composable
 fun KatalogScreen(navController: NavHostController) {
     val data = listOf(
-        Ruangan(stringResource(R.string.ruangRapat), stringResource(R.string.desc_rapat), R.drawable.meetingroom),
-        Ruangan( stringResource(R.string.ruangPermainan), stringResource(R.string.desc_permainan), R.drawable.psroom),
-        Ruangan( stringResource(R.string.ruangMusik), stringResource(R.string.desc_musik), R.drawable.musicstudio),
-        Ruangan( stringResource(R.string.ruangNonton), stringResource(R.string.desc_nonton), R.drawable.movieroom)
+        Ruangan(stringResource(R.string.ruangRapat), stringResource(R.string.desc_rapat), stringResource(R.string.harga_R_rapat), R.drawable.meetingroom),
+        Ruangan( stringResource(R.string.ruangPermainan), stringResource(R.string.desc_permainan), stringResource(R.string.harga_R_permainan), R.drawable.psroom),
+        Ruangan( stringResource(R.string.ruangMusik), stringResource(R.string.desc_musik), stringResource(R.string.harga_R_musik), R.drawable.musicstudio),
+        Ruangan( stringResource(R.string.ruangNonton), stringResource(R.string.desc_nonton), stringResource(R.string.harga_R_nonton),R.drawable.movieroom)
 
     )
 
