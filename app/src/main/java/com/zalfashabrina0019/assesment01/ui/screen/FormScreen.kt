@@ -115,11 +115,13 @@ fun ScreenFormContent(modifier: Modifier = Modifier) {
     var hargaError by rememberSaveable { mutableStateOf(false) }
 
     var totalHarga by rememberSaveable { mutableStateOf(0) }
+
+    var tampilHasil by rememberSaveable { mutableStateOf(false) }
     Column(
         modifier = modifier.fillMaxSize()
             .verticalScroll(rememberScrollState())
             .padding(26.dp),
-        verticalArrangement = Arrangement.spacedBy(18.dp),
+        verticalArrangement = Arrangement.spacedBy(10.dp),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Row(
@@ -154,6 +156,7 @@ fun ScreenFormContent(modifier: Modifier = Modifier) {
             singleLine = true,
             keyboardOptions = KeyboardOptions(
                 keyboardType = KeyboardType.Text,
+
                 imeAction = ImeAction.Next
             ),
             modifier = Modifier.fillMaxWidth()
@@ -234,19 +237,29 @@ fun ScreenFormContent(modifier: Modifier = Modifier) {
         }
         Button(
             onClick = {
+                namaError  = nama.isBlank()
                 durasiError = (durasi == "" || durasi == "0")
                 hargaError = hargaTerpilih == 0
-                if (durasiError || hargaError) return@Button
+                if (namaError || durasiError || hargaError) {
+                    tampilHasil = false
+                    return@Button
+                }
 
                 totalHarga = hitungTotal(durasi.toInt(), hargaTerpilih)
+                tampilHasil = true
             },
             modifier = Modifier.padding(top = 8.dp),
             contentPadding = PaddingValues(horizontal = 32.dp, vertical = 16.dp)
         ) {
             Text(text = stringResource(R.string.simpan))
         }
-        if (totalHarga != 0) {
-            HorizontalDivider(modifier = Modifier.padding(vertical = 8.dp))
+        if (tampilHasil) {
+            HorizontalDivider(modifier = Modifier.padding(vertical = 2.dp))
+
+            Text(text = "Nama: $nama")
+            Text(text = "Ruangan: $ruanganTerpilih")
+            Text(text = "Durasi: $durasi jam")
+            Text(text = "Harga: Rp $hargaTerpilih")
 
             Text(
                 text = "Total Harga: Rp $totalHarga",
