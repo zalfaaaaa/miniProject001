@@ -69,7 +69,7 @@ fun FormScreen(navController: NavHostController) {
                     }
                 },
                 title = {
-                    Text(text = stringResource(id = R.string.mulaiRent))
+                    Text(text = stringResource(id = R.string.rental))
                 },
                 colors = TopAppBarDefaults.topAppBarColors(
                     containerColor = MaterialTheme.colorScheme.primaryContainer,

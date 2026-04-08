@@ -21,10 +21,10 @@
     <string name="desc_rapat">This room is designed to provide comfort for those who want to hold meetings and discussions with their team.</string>
     <string name="desc_permainan">This room offers various games, perfect for those who want to relieve stress.</string>
     <string name="desc_nonton">This room offers a mini cinema-like viewing experience that is comfortable and enjoyable.</string>
-    <string name="harga_R.musik">IDR 25,000</string>
+    <string name="harga_R.musik">Start from IDR 25,000</string>
     <string name="input_invalid">This field cannot be empty!</string>
     <string name="perintah">Fill out the form below!</string>
-    <string name="harga_R.rapat">IDR 10,000</string>
-    <string name="harga_R.permainan">IDR 15,000</string>
-    <string name="harga_R.nonton">IDR 20,000</string>
+    <string name="harga_R.rapat">Start from IDR 10,000</string>
+    <string name="harga_R.permainan">Start from IDR 15,000</string>
+    <string name="harga_R.nonton">Start from IDR 20,000</string>
 </resources>

@@ -89,11 +89,12 @@ fun KatalogScreen(navController: NavHostController) {
 fun ScreenKatalogContent(ruangan: Ruangan, modifier: Modifier = Modifier, onClick: () -> Unit) {
     val localFont = FontFamily(
         Font(R.font.poppins_bold, FontWeight.Bold),
-        Font(R.font.poppins_medium, FontWeight.Medium)
+        Font(R.font.poppins_medium, FontWeight.Medium),
+        Font(R.font.poppins_semibold, FontWeight.SemiBold)
     )
 
     Column(
-        modifier = modifier.fillMaxSize().padding(16.dp),
+        modifier = modifier.fillMaxSize().padding(20.dp),
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
@@ -101,21 +102,32 @@ fun ScreenKatalogContent(ruangan: Ruangan, modifier: Modifier = Modifier, onClic
             painter = painterResource(id = ruangan.imageResId),
             contentDescription = stringResource(R.string.gambar, ruangan.nama, ruangan.descRuang),
             contentScale = ContentScale.Crop,
-            modifier = Modifier.fillMaxWidth().height(190.dp)
+            modifier = Modifier.fillMaxWidth().height(180.dp)
         )
         Text(
             text = ruangan.nama,
             style = MaterialTheme.typography.headlineLarge,
             fontFamily = localFont,
             fontWeight = FontWeight.Bold,
+            color = MaterialTheme.colorScheme.primary,
             modifier = Modifier.padding(top = 16.dp)
         )
         Text(
             text = ruangan.descRuang,
             fontFamily = localFont,
             fontWeight = FontWeight.Medium,
-            textAlign = TextAlign.Center,
-            style = MaterialTheme.typography.bodySmall,
+            textAlign = TextAlign.Justify,
+            style = MaterialTheme.typography.bodyLarge,
+            color = MaterialTheme.colorScheme.primary,
+            modifier = Modifier.padding(top = 3.dp)
+        )
+        Text(
+            text = ruangan.hargaRoom,
+            fontFamily = localFont,
+            fontWeight = FontWeight.SemiBold,
+            textAlign = TextAlign.Start,
+            style = MaterialTheme.typography.bodyLarge,
+            color = MaterialTheme.colorScheme.primary,
             modifier = Modifier.padding(top = 3.dp)
         )
         Button(
