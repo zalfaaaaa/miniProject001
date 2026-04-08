@@ -274,7 +274,7 @@ fun ScreenFormContent(modifier: Modifier = Modifier) {
 
             Text(text = stringResource(R.string.nama) + ": $nama")
             Text(text = stringResource(R.string.ruangan) + ": $ruanganTerpilih")
-            Text(text = stringResource(R.string.durasi) + ": $durasi hours")
+            Text(text = stringResource(R.string.durasi) + ": $durasi" + stringResource(R.string.jam))
             Text(text = stringResource(R.string.harga) + ":" + stringResource(R.string.Rp) +"$hargaTerpilih")
 
             Text(
